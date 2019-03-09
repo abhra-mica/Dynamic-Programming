@@ -1,25 +1,17 @@
-package dynamic_greedy;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 public class Knapsack_Greedy {
 	public static void main(String[] args) {
-
 		int[] weights = { 2, 3, 5, 7, 1, 4, 1 };
 		int[] profits = { 10, 5, 15, 7, 6, 18, 3 };
 		knapsack(15, weights, profits);
-
 	}
 
 	static void knapsack(int capacity, int[] weights, int[] profits) {
-		float[] profit_weight_ratio = new float[weights.length];// holds
-																// profit/weights
-																// ratio
+		float[] profit_weight_ratio = new float[weights.length];// holds profit/weights	ratio																												
 		float profit = 0;
-
 		for (int i = 0; i < weights.length; i++) {
 			profit_weight_ratio[i] = (float) profits[i] / (float) weights[i];
 		}
