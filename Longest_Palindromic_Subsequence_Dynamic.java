@@ -61,6 +61,7 @@ public class Longest_Palindromic_Subsequence_Dynamic {
 		int j = 5;
 		while (i <= j) {// The moment i>j that means we came down under the
 						// diagonal, so iteration must be stopped
+			//Below if and else if block takes care of the max(m[i][j-1] and m[i+1][j])
 			if (memoizationTable[i][j] == memoizationTable[i][j - 1]) {
 				j = j - 1;
 			} else if (memoizationTable[i][j] == memoizationTable[i + 1][j]) {
